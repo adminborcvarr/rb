@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BORÇVAR</title>
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="css/jcarousel.css" rel="stylesheet" />
+  <link href="css/flexslider.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Theme skin -->
+  <link href="skins/default.css" rel="stylesheet" />
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
+
+
+
+<body>
+  <div id="wrapper">
+
+    <div class="hidden-top">
+      <div class="hidden-top-inner container">
+        <div class="row">
+          <div class="span12">
+            <ul>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end toggle top area -->
+    <!-- start header -->
+    <header>
+      <div class="container ">
+        <!-- hidden top area toggle link -->
+        <div id="header-hidden-link">
+          <a href="#" class="toggle-link" title="Click me you'll get a surprise" data-target=".hidden-top"><i></i>Open</a>
+        </div>
+        <!-- end toggle link -->
+        <div class="row nomargin">
+          <div class="span12">
+            <div class="headnav">
+              <ul>
+                <li><a href="kayit-ol.php" data-toggle="modal"><i class="icon-user"></i> KAYIT OL</a></li>
+                <li><a href="üyegiris.php" data-toggle="modal">GİRİŞ YAP</a></li>
+              </ul>
+            </div>
+            <!-- Signup Modal -->
+            <div id="mySignup" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="mySignupModalLabel">KAYIT  <strong>OL</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label" for="inputEmail">Email</label>
+                    <div class="controls">
+                      <input type="text" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputSignupPassword">ŞİFRE</label>
+                    <div class="controls">
+                      <input type="password" id="inputSignupPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputSignupPassword2">ŞİFRE TEKRAR </label>
+                    <div class="controls">
+                      <input type="password" id="inputSignupPassword2" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" class="btn">KAYIT OL</button>
+                    </div>
+                    <p class="aligncenter margintop20">
+                      HESABIN VAR MI ? <a href="üyegiris.php" data-dismiss="modal" aria-hidden="true" data-toggle="modal">GİRİŞ YAP</a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- end signup modal -->
+            <!-- Sign in Modal -->
+            <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="mySigninModalLabel">GİRİŞ   <strong>YAP</strong></h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label" for="inputText">KULLANICI ADI</label>
+                    <div class="controls">
+                      <input type="text" id="inputText" placeholder="KULLANICI ADI">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputSigninPassword">ŞİFRE</label>
+                    <div class="controls">
+                      <input type="password" id="inputSigninPassword" placeholder="ŞİFRE">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" class="btn">GİRİŞ YAP </button>
+                    </div>
+                    <p class="aligncenter margintop20">
+                      ŞİFREMİ UNUTTUM  <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">YENİLE</a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- end signin modal -->
+            <!-- Reset Modal -->
+            <div id="myReset" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="myResetModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 id="myResetModalLabel">ŞİFRE YENİLEME <strong></strong></h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label" for="inputResetEmail">Email</label>
+                    <div class="controls">
+                      <input type="text" id="inputResetEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" class="btn">ŞİFREMİ YENİLE</button>
+                    </div>
+                    
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- end reset modal -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="logo">
+              <a href="index.html"><img src="/img/logo.PNG" alt="" class="logo"/></a>
+            </div>
+          </div>
+          <div class="span8">
+            <div class="navbar navbar-static-top">
+              <div class="navigation">
+                <nav>
+                  <ul class="nav topnav">
+                    <li class="dropdown active">
+                      <a href="index.html">ANASAYFA <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#"> 0-1-2-3-4 İLE BİTENLER <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="0.html">0</a></li>
+                        <li><a href="BİR.html">1</a></li>
+                        <li><a href="İKİ.html">2</a></li>
+                        <li><a href="3.html">3</a></li>
+                        <li><a href="4.html"> 4</a></li>
+                      
+                          <ul class="dropdown-menu sub-menu-level1">
+                            
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">  5 6  7 İLE BİTENLER  <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="5.html">5</a></li>
+                        <li><a href="6.html">6</a></li>
+                        <li><a href="7.html">7 </a></li>
+                       
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">8 9 İLE BİTENLER <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="8.html">8</a></li>
+                        <li><a href="9.html">9 </a></li>
+                       
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">CANLI DESTEK  <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="CANLIDESTEK.html">CANLI DESTEK İÇİN TIKLA </a></li>
+                        
+                      </ul>
+                    
+              </div>
+              <!-- end navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <section id="featured">
+      <!-- start slider -->
+      <!-- Slider -->
+      <div id="nivo-slider">
+        <div class="nivo-slider">
+          <!-- Slide #1 image -->
+          <img src="img/slides/nivo/bg-1.jpg" alt="" title="#caption-1" />
+          <!-- Slide #2 image -->
+          <img src="img/slides/nivo/bg-2.jpg" alt="" title="#caption-2" />
+          <!-- Slide #3 image -->
+          <img src="img/slides/nivo/bg-3.jpg" alt="" title="#caption-3" />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+              <!-- Slide #1 caption -->
+              <div class="nivo-caption" id="caption-1">
+                <div>
+                  
+                  <p>
+                    Hayat bisiklet sürmek gibidir. Dengede kalmak için hareket etmek zorundasınız. &nbsp;-Albert EİNSTEİN
+                  </p>
+                  
+                </div>
+              </div>
+              <!-- Slide #2 caption -->
+              <div class="nivo-caption" id="caption-2">
+                
+                  <p>
+                    “Çok çalışmanın yerini tutan başka bir şey yoktur.” &nbsp;-Thomas Edison
+                  </p>
+                  
+                </div>
+              </div>
+              <!-- Slide #3 caption -->
+              
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end slider -->
+    </section>
+    <section class="callaction">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="big-cta">
+              <div class="cta-text">
+                <h3>EYLÜL AYI: <span class="highlight"><strong></strong></span> </h3>
+              </div>
+              <div class="cta floatright">
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="row">
+              <div class="span3">
+                <div class="box aligncenter">
+                  <div class="aligncenter icon">
+                    
+                  </div>
+                  
+              
+                  <div class="text">
+                    
+                    </p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- divider -->
+        <div class="row">
+          <div class="span12">
+            <div class="solidline">
+            </div>
+          </div>
+        </div>
+        <!-- end divider -->
+        <!-- Portfolio Projects -->
+        <div class="row">
+          <div class="span12">
+            <h4 class="heading">5 NUMARALI KULANICI LİSTESİ: </h4>
+            <h4 class="heading"><div class=""><li><a href="03.html">03</a></li><br></div> </h4>
+            
+
+            
+            
+        <!-- End Portfolio Projects -->
+        <!-- divider -->
+        
+        
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="bottom">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="aligncenter">
+              <div id="twitter-wrapper">
+                <div id="twitter">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="">
+            <div class="widget">
+              <h5 class="widgetheading">SAYFA  </h5>
+              <ul class="link-list">
+                <li><a href="#">SAYFA BAŞINA DÖN </a><p> GÜNCELLEME SAATİ 00.00. HER GÜN SAAT 00.00 OLDUĞUNDA BORÇ ALACAK DÜZENLENECEKTİR</p></li>
+                
+              </ul>
+            </div>
+          </div>
+                      </div>
+          </div>
+        </div>
+      </div>
+      <div id="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <div class="copyright">
+                <p>
+                  <span>&copy; 2020 Tüm Hakları Saklıdır borçvar.xyz </span>
+                </p>
+                <div class="credits">
+                  <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flattern
+                  -->
+                  
+                </div>
+              </div>
+            </div>
+            <div class="span6">
+              <ul class="social-network">
+             
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
+  <!-- java
+    ================================================== -->
+  <!-- Sayfaların daha hızlı yüklenmesini sağlamak için Belgenin sonuna yerleştirilir -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jcarousel/jquery.jcarousel.min.js"></script>
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <script src="js/jquery.fancybox-media.js"></script>
+  <script src="js/google-code-prettify/prettify.js"></script>
+  <script src="js/portfolio/jquery.quicksand.js"></script>
+  <script src="js/portfolio/setting.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/jquery.nivo.slider.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/jquery.ba-cond.min.js"></script>
+  <script src="js/jquery.slitslider.js"></script>
+  <script src="js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="js/custom.js"></script>
+
+</body>
+</html>
